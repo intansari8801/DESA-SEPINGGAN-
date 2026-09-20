@@ -3,104 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desa Sejahtera - Beranda</title>
+    <title>Desa Sepinggan | Beranda</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
     <nav class="navbar">
-        <div class="logo">
-            <span>🏡</span>
+
+        <a href="index.html" class="logo">
+            <div class="logo-icon">DS</div>
             <div>
-                <strong>DESA SEJAHTERA</strong>
+                <strong>DESA SEPINGGAN</strong>
                 <small>Website Resmi Desa</small>
             </div>
-        </div>
+        </a>
 
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
         <ul class="nav-menu" id="navMenu">
-            <li><a class="active" href="index.html">Beranda</a></li>
+            <li><a href="index.html" class="active">Beranda</a></li>
             <li><a href="profil.html">Profil</a></li>
             <li><a href="potensi.html">Potensi</a></li>
             <li><a href="berita.html">Berita</a></li>
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
+
     </nav>
 </header>
 
+
 <section class="hero">
-    <img src="foto/desa.jpg" alt="Desa Sejahtera">
+
+    <img src="foto/IMG_9111.jpeg" alt="Desa Sepinggan">
+
+    <div class="hero-overlay"></div>
 
     <div class="hero-content">
-        <p class="subtitle">SELAMAT DATANG DI</p>
-        <h1>Desa Sejahtera</h1>
+
+        <span class="label">SELAMAT DATANG</span>
+
+        <h1>Desa Sepinggan</h1>
+
         <p>
-            Bersama membangun desa yang maju, mandiri,
-            nyaman, dan sejahtera untuk seluruh masyarakat.
+            Bersama membangun Desa Sepinggan yang maju,
+            mandiri, nyaman, dan sejahtera.
         </p>
 
-        <a href="profil.html" class="btn">Jelajahi Desa →</a>
+        <a href="profil.html" class="btn">
+            Jelajahi Desa
+        </a>
+
     </div>
+
 </section>
+
 
 <section class="section">
-    <div class="section-title">
-        <p>TENTANG DESA</p>
-        <h2>Membangun Desa Bersama</h2>
-    </div>
 
-    <div class="about">
-        <div>
-            <h3>Desa yang terus berkembang</h3>
-            <p>
-                Desa Sejahtera merupakan desa yang memiliki
-                semangat gotong royong dan kebersamaan.
-                Berbagai program pembangunan terus dilakukan
-                untuk meningkatkan kualitas hidup masyarakat.
-            </p>
-            <a href="profil.html" class="text-btn">Selengkapnya →</a>
-        </div>
-
-        <div class="stats">
-            <div class="stat">
-                <h3>2.450+</h3>
-                <p>Penduduk</p>
-            </div>
-            <div class="stat">
-                <h3>680</h3>
-                <p>Kepala Keluarga</p>
-            </div>
-            <div class="stat">
-                <h3>12</h3>
-                <p>RT</p>
-            </div>
-            <div class="stat">
-                <h3>6</h3>
-                <p>Dusun</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="highlight">
-    <div>
-        <p class="subtitle">MARI BERSAMA</p>
-        <h2>Membangun Desa untuk Masa Depan</h2>
+    <div class="section-heading">
+        <span>PROFIL SINGKAT</span>
+        <h2>Mengenal Desa Sepinggan</h2>
         <p>
-            Kemajuan desa adalah hasil dari kerja sama pemerintah
-            desa dan seluruh masyarakat.
+            Desa yang tumbuh dengan semangat kebersamaan
+            dan gotong royong masyarakat.
         </p>
     </div>
 
-    <a href="kontak.html" class="btn light">Hubungi Kami</a>
+    <div class="intro">
+
+        <div class="intro-text">
+
+            <h3>Selamat Datang di Desa Sepinggan</h3>
+
+            <p>
+                Desa Sepinggan merupakan bagian dari masyarakat
+                yang terus berupaya meningkatkan pembangunan,
+                pelayanan, dan kesejahteraan masyarakat.
+            </p>
+
+            <p>
+                Dengan dukungan pemerintah desa dan seluruh
+                masyarakat, berbagai potensi desa terus
+                dikembangkan untuk menciptakan masa depan
+                yang lebih baik.
+            </p>
+
+            <a href="profil.html" class="text-link">
+                Lihat Profil Lengkap →
+            </a>
+
+        </div>
+
+
+        <div class="statistics">
+
+            <div class="stat-box">
+                <strong>6</strong>
+                <span>Dusun</span>
+            </div>
+
+            <div class="stat-box">
+                <strong>12</strong>
+                <span>RT</span>
+            </div>
+
+            <div class="stat-box">
+                <strong>680+</strong>
+                <span>Keluarga</span>
+            </div>
+
+            <div class="stat-box">
+                <strong>2.450+</strong>
+                <span>Penduduk</span>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
+
+<section class="welcome">
+
+    <div>
+        <span>DESA SEPINGGAN</span>
+
+        <h2>
+            Bersama Membangun Desa,
+            Bersama Mewujudkan Masa Depan
+        </h2>
+
+        <p>
+            Kemajuan desa membutuhkan kerja sama dan
+            kepedulian dari seluruh masyarakat.
+        </p>
+    </div>
+
+    <a href="kontak.html" class="btn white">
+        Hubungi Kami
+    </a>
+
+</section>
+
+
 <footer>
-    <p>© 2026 Desa Sejahtera. Semua Hak Dilindungi.</p>
+
+    <div class="footer-content">
+
+        <div>
+            <h3>Desa Sepinggan</h3>
+            <p>
+                Website informasi resmi Desa Sepinggan.
+            </p>
+        </div>
+
+        <div>
+            <h4>Navigasi</h4>
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="potensi.html">Potensi</a>
+            <a href="berita.html">Berita</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Desa Sepinggan. Semua Hak Dilindungi.
+    </div>
+
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
