@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Desa - Desa Sejahtera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <span>🏡</span>
+            <div>
+                <strong>DESA SEJAHTERA</strong>
+                <small>Website Resmi Desa</small>
+            </div>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="potensi.html">Potensi</a></li>
+            <li><a class="active" href="berita.html">Berita</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Berita Desa</h1>
+    <p>Informasi dan kegiatan terbaru Desa Sejahtera</p>
+</section>
+
+<section class="section">
+
+    <div class="news-feature">
+        <img src="foto/kegiatan.jpg" alt="Kegiatan Desa">
+
+        <div>
+            <span class="badge">KEGIATAN DESA</span>
+            <h2>Gotong Royong Bersama Masyarakat</h2>
+            <small>20 September 2026</small>
+
+            <p>
+                Pemerintah desa bersama masyarakat melaksanakan
+                kegiatan gotong royong untuk menjaga kebersihan
+                dan lingkungan desa.
+            </p>
+
+            <button class="btn" onclick="showNews()">
+                Baca Selengkapnya
+            </button>
+        </div>
+    </div>
+
+    <div class="section-title news-title">
+        <p>INFORMASI</p>
+        <h2>Berita Terbaru</h2>
+    </div>
+
+    <div class="news-grid">
+
+        <article class="news-card">
+            <span>15 SEPTEMBER 2026</span>
+            <h3>Pelayanan Administrasi Desa</h3>
+            <p>
+                Informasi mengenai pelayanan administrasi
+                kepada seluruh masyarakat desa.
+            </p>
+            <a href="#">Baca →</a>
+        </article>
+
+        <article class="news-card">
+            <span>10 SEPTEMBER 2026</span>
+            <h3>Program Pemberdayaan Masyarakat</h3>
+            <p>
+                Pemerintah desa menjalankan program untuk
+                meningkatkan keterampilan masyarakat.
+            </p>
+            <a href="#">Baca →</a>
+        </article>
+
+        <article class="news-card">
+            <span>05 SEPTEMBER 2026</span>
+            <h3>Kegiatan Pemuda Desa</h3>
+            <p>
+                Pemuda desa ikut berperan dalam kegiatan
+                sosial dan pembangunan lingkungan.
+            </p>
+            <a href="#">Baca →</a>
+        </article>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Desa Sejahtera. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
