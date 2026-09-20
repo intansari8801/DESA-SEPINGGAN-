@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Desa Sejahtera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <span>🏡</span>
+            <div>
+                <strong>DESA SEJAHTERA</strong>
+                <small>Website Resmi Desa</small>
+            </div>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="potensi.html">Potensi</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a class="active" href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Kontak Desa</h1>
+    <p>Hubungi Pemerintah Desa Sejahtera</p>
+</section>
+
+<section class="section">
+
+    <div class="contact-grid">
+
+        <div class="contact-image">
+            <img src="foto/masyarakat.jpg" alt="Masyarakat Desa">
+
+            <div class="contact-overlay">
+                <h2>Mari Terhubung</h2>
+                <p>
+                    Kami siap menerima pertanyaan,
+                    saran, dan informasi dari masyarakat.
+                </p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+                <span>📍</span>
+                <div>
+                    <h3>Alamat</h3>
+                    <p>
+                        Jl. Desa Sejahtera No. 01,
+                        Kecamatan Sejahtera,
+                        Kabupaten Indonesia.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>📞</span>
+                <div>
+                    <h3>Telepon</h3>
+                    <p>0812-3456-7890</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>✉️</span>
+                <div>
+                    <h3>Email</h3>
+                    <p>desasejahtera@email.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>🕐</span>
+                <div>
+                    <h3>Jam Pelayanan</h3>
+                    <p>
+                        Senin - Jumat<br>
+                        08.00 - 15.00 WIB
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section gray">
+
+    <div class="section-title">
+        <p>KIRIM PESAN</p>
+        <h2>Hubungi Kami</h2>
+    </div>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+
+        <div class="form-row">
+            <input type="text" id="nama" placeholder="Nama Lengkap" required>
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <input type="text" id="subjek" placeholder="Subjek" required>
+
+        <textarea id="pesan" rows="6" placeholder="Tulis pesan Anda..." required></textarea>
+
+        <button type="submit" class="btn">
+            Kirim Pesan
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Desa Sejahtera. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
