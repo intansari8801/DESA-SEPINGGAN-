@@ -1,1028 +1,134 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// ============================
+// MENU MOBILE
+// ============================
 
-:root {
-    --green: #176b4d;
-    --green-light: #24966c;
-    --dark: #123b2e;
-    --text: #53635d;
-    --light: #f3f7f5;
-    --white: #ffffff;
-    --border: #dce7e2;
-}
+function toggleMenu() {
 
-html {
-    scroll-behavior: smooth;
-}
+    const menu = document.getElementById("navMenu");
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-    line-height: 1.7;
-    background: var(--white);
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background: rgba(255,255,255,0.97);
-    box-shadow: 0 3px 18px rgba(0,0,0,0.08);
-}
-
-.navbar {
-    max-width: 1200px;
-    min-height: 76px;
-    margin: auto;
-    padding: 0 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-icon {
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    color: white;
-    background: var(--green);
-
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.logo strong {
-    display: block;
-    color: var(--dark);
-    font-size: 15px;
-}
-
-.logo small {
-    display: block;
-    color: #7c8c85;
-    font-size: 10px;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 5px;
-    list-style: none;
-}
-
-.nav-menu a {
-    display: block;
-    padding: 10px 15px;
-
-    border-radius: 7px;
-
-    color: #44534e;
-    font-size: 14px;
-
-    transition: 0.3s;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: white;
-    background: var(--green);
-}
-
-.menu-btn {
-    display: none;
-
-    border: none;
-    background: transparent;
-
-    font-size: 28px;
-    cursor: pointer;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    position: relative;
-    height: 620px;
-    overflow: hidden;
-}
-
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.7),
-            rgba(0,0,0,0.3),
-            rgba(0,0,0,0.1)
-        );
-}
-
-.hero-content {
-    position: absolute;
-    z-index: 2;
-
-    top: 50%;
-    left: 8%;
-
-    transform: translateY(-50%);
-
-    max-width: 650px;
-
-    color: white;
-}
-
-.label {
-    color: #a9e7ce;
-
-    font-size: 13px;
-    font-weight: bold;
-
-    letter-spacing: 3px;
-}
-
-.hero h1 {
-    margin: 12px 0 18px;
-
-    font-size: clamp(48px, 7vw, 78px);
-    line-height: 1.05;
-}
-
-.hero-content p {
-    max-width: 570px;
-
-    margin-bottom: 30px;
-
-    font-size: 18px;
-}
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.btn {
-    display: inline-block;
-
-    padding: 13px 24px;
-
-    border: none;
-    border-radius: 8px;
-
-    color: white;
-    background: var(--green);
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: var(--green-light);
-    transform: translateY(-3px);
-}
-
-.btn.white {
-    color: var(--green);
-    background: white;
-}
-
-
-/* =========================
-   SECTION
-========================= */
-
-.section {
-    max-width: 1150px;
-
-    margin: auto;
-
-    padding: 85px 25px;
-}
-
-.gray-section {
-    padding: 85px 25px;
-
-    background: var(--light);
-}
-
-.section-heading {
-    max-width: 650px;
-
-    margin: 0 auto 50px;
-
-    text-align: center;
-}
-
-.section-heading > span {
-    color: var(--green-light);
-
-    font-size: 12px;
-    font-weight: bold;
-
-    letter-spacing: 2px;
-}
-
-.section-heading h2 {
-    margin: 5px 0 10px;
-
-    color: var(--dark);
-
-    font-size: 36px;
-}
-
-.section-heading p {
-    font-size: 15px;
-}
-
-
-/* =========================
-   INTRO
-========================= */
-
-.intro {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.intro h3 {
-    margin-bottom: 15px;
-
-    color: var(--dark);
-
-    font-size: 28px;
-}
-
-.intro-text p {
-    margin-bottom: 15px;
-}
-
-.text-link {
-    display: inline-block;
-
-    margin-top: 10px;
-
-    color: var(--green);
-
-    font-weight: bold;
-}
-
-.statistics {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 15px;
-}
-
-.stat-box {
-    padding: 28px 15px;
-
-    border-radius: 12px;
-
-    background: var(--light);
-
-    text-align: center;
-}
-
-.stat-box strong {
-    display: block;
-
-    color: var(--green);
-
-    font-size: 29px;
-}
-
-.stat-box span {
-    font-size: 13px;
-}
-
-
-/* =========================
-   WELCOME
-========================= */
-
-.welcome {
-    padding: 65px 8%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-
-    color: white;
-
-    background: var(--green);
-}
-
-.welcome > div {
-    max-width: 700px;
-}
-
-.welcome span {
-    color: #a9e7ce;
-
-    font-size: 12px;
-    font-weight: bold;
-
-    letter-spacing: 2px;
-}
-
-.welcome h2 {
-    margin: 8px 0;
-
-    font-size: 34px;
-}
-
-
-/* =========================
-   PAGE BANNER
-========================= */
-
-.page-banner {
-    padding: 80px 20px;
-
-    text-align: center;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #103b2d,
-            #24966c
-        );
-}
-
-.page-banner h1 {
-    font-size: 48px;
-    margin-bottom: 5px;
-}
-
-.page-banner p {
-    opacity: 0.9;
-}
-
-
-/* =========================
-   PROFILE
-========================= */
-
-.profile {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.profile-image img {
-    width: 100%;
-    height: 430px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
-}
-
-.label-green {
-    color: var(--green-light);
-
-    font-size: 12px;
-    font-weight: bold;
-
-    letter-spacing: 2px;
-}
-
-.profile-content h2 {
-    margin: 8px 0 18px;
-
-    color: var(--dark);
-
-    font-size: 40px;
-}
-
-.profile-content p {
-    margin-bottom: 15px;
-}
-
-
-/* =========================
-   VISI MISI
-========================= */
-
-.vision-container {
-    max-width: 1000px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-}
-
-.vision-card {
-    padding: 35px;
-
-    border-radius: 15px;
-
-    background: white;
-
-    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
-}
-
-.card-icon {
-    width: 50px;
-    height: 50px;
-
-    margin-bottom: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    color: white;
-    background: var(--green);
-
-    font-weight: bold;
-}
-
-.vision-card h3 {
-    margin-bottom: 10px;
-
-    color: var(--dark);
-
-    font-size: 24px;
-}
-
-
-/* =========================
-   OFFICIAL
-========================= */
-
-.officials {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.official-card {
-    padding: 30px;
-
-    border-radius: 15px;
-
-    background: var(--light);
-
-    text-align: center;
-}
-
-.official-icon {
-    margin-bottom: 12px;
-
-    font-size: 55px;
-}
-
-.official-card h3 {
-    color: var(--dark);
-
-    font-size: 18px;
-}
-
-.official-card p {
-    color: var(--green);
-}
-
-
-/* =========================
-   POTENSI
-========================= */
-
-.potential-main {
-    display: grid;
-
-    grid-template-columns: 1.1fr 1fr;
-
-    gap: 55px;
-
-    align-items: center;
-}
-
-.potential-main img {
-    width: 100%;
-    height: 410px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
-}
-
-.potential-main h2 {
-    margin: 10px 0 18px;
-
-    color: var(--dark);
-
-    font-size: 38px;
-}
-
-.potential-main p {
-    margin-bottom: 15px;
-}
-
-.potential-grid {
-    max-width: 1150px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.potential-card {
-    padding: 30px 20px;
-
-    border-radius: 15px;
-
-    background: white;
-
-    text-align: center;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-
-    transition: 0.3s;
-}
-
-.potential-card:hover {
-    transform: translateY(-8px);
-}
-
-.potential-icon {
-    margin-bottom: 12px;
-
-    font-size: 42px;
-}
-
-.potential-card h3 {
-    margin-bottom: 8px;
-
-    color: var(--dark);
-}
-
-
-/* =========================
-   BERITA
-========================= */
-
-.featured-news {
-    display: grid;
-
-    grid-template-columns: 1.1fr 1fr;
-
-    gap: 55px;
-
-    align-items: center;
-
-    margin-bottom: 80px;
-}
-
-.featured-news img {
-    width: 100%;
-    height: 390px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
-}
-
-.news-category {
-    display: inline-block;
-
-    margin-bottom: 10px;
-    padding: 6px 12px;
-
-    border-radius: 20px;
-
-    color: var(--green);
-
-    background: #e1f3eb;
-
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.featured-news h2 {
-    margin-bottom: 8px;
-
-    color: var(--dark);
-
-    font-size: 34px;
-    line-height: 1.3;
-}
-
-.featured-news small {
-    display: block;
-
-    margin-bottom: 15px;
-}
-
-.featured-news p {
-    margin-bottom: 20px;
-}
-
-.news-heading {
-    margin-bottom: 30px;
-}
-
-.news-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.news-card {
-    padding: 30px;
-
-    border-radius: 15px;
-
-    background: var(--light);
-}
-
-.news-card > span {
-    color: var(--green-light);
-
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.news-card h3 {
-    margin: 10px 0;
-
-    color: var(--dark);
-
-    font-size: 20px;
-}
-
-.news-card p {
-    margin-bottom: 15px;
-}
-
-.news-card a {
-    color: var(--green);
-
-    font-weight: bold;
-}
-
-
-/* =========================
-   KONTAK
-========================= */
-
-.contact-layout {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 55px;
-
-    align-items: center;
-}
-
-.contact-image {
-    position: relative;
-}
-
-.contact-image img {
-    width: 100%;
-    height: 490px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
-}
-
-.contact-caption {
-    position: absolute;
-
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-
-    padding: 25px;
-
-    border-radius: 12px;
-
-    color: white;
-
-    background: rgba(0,0,0,0.65);
-}
-
-.contact-caption h2 {
-    margin-bottom: 5px;
-}
-
-.contact-item {
-    display: flex;
-
-    gap: 18px;
-
-    margin-bottom: 28px;
-}
-
-.contact-icon {
-    font-size: 28px;
-}
-
-.contact-item h3 {
-    margin-bottom: 3px;
-
-    color: var(--dark);
-}
-
-
-/* =========================
-   FORM
-========================= */
-
-.contact-form {
-    max-width: 850px;
-
-    margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-
-    padding: 15px;
-
-    margin-bottom: 15px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 8px;
-
-    outline: none;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 14px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--green);
-}
-
-.form-row {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 15px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    color: #d3e0db;
-
-    background: #102d24;
-}
-
-.footer-content {
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 45px 25px;
-
-    display: grid;
-
-    grid-template-columns: 2fr 1fr;
-
-    gap: 50px;
-}
-
-.footer-content h3,
-.footer-content h4 {
-    margin-bottom: 10px;
-
-    color: white;
-}
-
-.footer-content a {
-    display: block;
-
-    margin-bottom: 5px;
-
-    font-size: 14px;
-}
-
-.footer-content a:hover {
-    color: #8dd8ba;
-}
-
-.copyright {
-    padding: 20px;
-
-    border-top: 1px solid rgba(255,255,255,0.1);
-
-    text-align: center;
-
-    font-size: 12px;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 850px) {
-
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-menu {
-        position: absolute;
-
-        top: 76px;
-        left: 0;
-        right: 0;
-
-        display: none;
-
-        flex-direction: column;
-
-        padding: 15px 20px;
-
-        background: white;
-
-        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
-
-    .nav-menu.show {
-        display: flex;
-    }
-
-    .nav-menu a {
-        width: 100%;
-    }
-
-    .hero {
-        height: 550px;
-    }
-
-    .hero-content {
-        left: 25px;
-        right: 25px;
-    }
-
-    .intro,
-    .profile,
-    .potential-main,
-    .featured-news,
-    .contact-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .vision-container {
-        grid-template-columns: 1fr;
-    }
-
-    .officials {
-        grid-template-columns: 1fr;
-    }
-
-    .potential-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .welcome {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
+    if (menu) {
+        menu.classList.toggle("show");
     }
 
 }
 
 
-@media (max-width: 500px) {
+// ============================
+// TUTUP MENU SETELAH LINK DIKLIK
+// ============================
 
-    .navbar {
-        padding: 0 15px;
-    }
+const navLinks = document.querySelectorAll(".nav-menu a");
 
-    .logo strong {
-        font-size: 13px;
-    }
+navLinks.forEach(function(link) {
 
-    .hero h1 {
-        font-size: 46px;
-    }
+    link.addEventListener("click", function() {
 
-    .hero-content p {
-        font-size: 15px;
-    }
+        const menu = document.getElementById("navMenu");
 
-    .section {
-        padding: 60px 18px;
-    }
+        if (menu) {
+            menu.classList.remove("show");
+        }
 
-    .gray-section {
-        padding: 60px 18px;
-    }
+    });
 
-    .section-heading h2 {
-        font-size: 29px;
-    }
+});
 
-    .page-banner h1 {
-        font-size: 38px;
-    }
 
-    .statistics {
-        grid-template-columns: 1fr 1fr;
-    }
+// ============================
+// BERITA
+// ============================
 
-    .potential-grid {
-        grid-template-columns: 1fr;
-    }
+function showNews() {
 
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-image img,
-    .potential-main img,
-    .featured-news img,
-    .contact-image img {
-        height: 330px;
-    }
+    alert(
+        "Kegiatan Desa Sepinggan merupakan salah satu bentuk kebersamaan masyarakat dalam mendukung pembangunan dan menjaga lingkungan desa."
+    );
 
 }
+
+
+// ============================
+// FORM KONTAK
+// ============================
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    const nama =
+        document.getElementById("nama").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const subjek =
+        document.getElementById("subjek").value.trim();
+
+    const pesan =
+        document.getElementById("pesan").value.trim();
+
+
+    if (
+        nama === "" ||
+        email === "" ||
+        subjek === "" ||
+        pesan === ""
+    ) {
+
+        alert("Silakan lengkapi semua data.");
+
+        return;
+    }
+
+
+    alert(
+        "Terima kasih, " +
+        nama +
+        "! Pesan Anda berhasil dikirim."
+    );
+
+
+    document.querySelector(".contact-form").reset();
+
+}
+
+
+// ============================
+// ANIMASI SCROLL
+// ============================
+
+const animatedElements =
+    document.querySelectorAll(
+        ".stat-box, .vision-card, .official-card, .potential-card, .news-card, .contact-item"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
+
+
+animatedElements.forEach(function(element) {
+
+    observer.observe(element);
+
+});
